@@ -1,0 +1,83 @@
+
+# Requests for the django-rest-auth :: Begins
+
+## Checking the login route.
+POST http://localhost:8080/api/auth/login/ HTTP/1.1
+content-type: application/json
+
+{
+  "username": "random_user_123",
+  "password": "@Random54321"
+}
+###
+
+## Checking the Register route.
+POST http://localhost:8080/api/auth/register/ HTTP/1.1
+content-type: application/json
+
+{
+  "username": "random_user",
+  "password1": "@Random54321",
+  "password2": "@Random54321",
+  "email": "vivekascoder@gmail.com"
+}
+###
+
+
+# Requests for the django-rest-auth :: Ends
+
+GET http://localhost:3000/api/category HTTP/1.1
+content-type: application/json
+###
+
+GET http://localhost:3000/api/category/6 HTTP/1.1
+content-type: application/json
+###
+
+GET http://localhost:3000/api/category/6/links HTTP/1.1
+content-type: application/json
+###
+
+POST http://localhost:8080/api/category HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Fun"
+}
+###
+
+PUT http://localhost:8080/api/category/8 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "More Fun Videos"
+}
+###
+
+
+GET http://localhost:8080/api/link HTTP/1.1
+content-type: application/json
+###
+
+POST http://localhost:8080/api/link HTTP/1.1
+content-type: application/json
+
+{
+  "link": "https://www.youtube.com/watch?v=zhTVcA8fuRI",
+  "description": "A randome game.",
+  "category": 6
+}
+###
+
+# Link Detail View's Requests.
+GET http://localhost:8080/api/link/2 HTTP/1.1
+content-type: application/json
+###
+
+PUT http://localhost:8080/api/link/2 HTTP/1.1
+content-type: application/json
+
+{
+  "description": "Web development timelapse"
+}
+###
